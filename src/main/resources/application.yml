@@ -1,0 +1,13 @@
+spring:
+  application:
+     name: demo
+resilience4j.retry:
+  instances:
+    demo:
+      maxAttempts: 3
+      waitDuration: 1s
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 1.1
+#      retryExceptions:
+#        - feign.RetryableException
+
